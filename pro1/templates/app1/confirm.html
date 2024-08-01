@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Document</title>
+{% endblock %}
+
+{% block content %}
+
+<div class = "container">
+    <form method = "post">
+        {% csrf_token %}
+        <h1>Do you want to Delete <span style ="color:red">fields ;-{{obj.name}}</span>Record</h1>
+
+        <input type="submit" value="Yes" class="btn btn-danger">
+        <a href="/v1/s1/" class="btn btn-success">NO</a>
+    </form>
+</div>
+
+{% endblock %}
